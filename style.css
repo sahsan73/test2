@@ -1,0 +1,304 @@
+/* global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* global variable */
+:root {
+  --main-color: #fff;
+  --main-color-dark: #ccc;
+  --main-color-dark-2: #aaa;
+  --secondary-header-number-color: #57606a;
+  --secondary-header-text-color: #3b4856;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.header-hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("imgs/hero-section-background-image.png");
+  background-repeat: no-repeat;
+  padding-top: 0.5rem;
+  font-style: italic;
+
+  position: relative;
+}
+
+.main-nav {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+a:link,
+a:hover {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-color-dark);
+}
+
+.nav-links a:link {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid var(--main-color-dark);
+}
+
+.hero-text {
+  top: 31%;
+  left: 25%;
+  position: absolute;
+}
+
+/**********************************/
+/*********HISTORY SECTION**********/
+.history-section {
+  background-image: url("imgs/history-section-background-image.png");
+  background-size: cover;
+  height: 130vh;
+  width: 100%;
+  padding-top: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.history-section .container {
+  width: 60%;
+}
+
+.secondary-header {
+  position: relative;
+  display: flex;
+}
+
+.secondary-header-number {
+  font-size: 12rem;
+  color: var(--secondary-header-number-color);
+}
+
+.secondary-header-text {
+  font-size: 3.2rem;
+  color: var(--secondary-header-text-color);
+  text-transform: uppercase;
+  font-weight: 600;
+
+  position: absolute;
+  top: 30%;
+  left: calc(15% + 0.5rem);
+}
+
+.history-text {
+  font-size: 1.4rem;
+  width: 80%;
+  padding-left: 10%;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/*   Carousel component    */
+.hidden {
+  display: none;
+}
+
+.carousel {
+  text-align: center;
+  background-color: rgba(160, 177, 193, 0.785);
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dots {
+  /* position: absolute; */
+  bottom: 0;
+  left: 50%;
+  padding-top: 0.8rem;
+  padding-bottom: 1.2rem;
+
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-header-number-color);
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+}
+
+.dot--fill {
+  background-color: var(--main-color);
+}
+
+/**********************************/
+/********* CLIMB SECTION **********/
+.climb-section {
+  padding-top: 4rem;
+}
+
+.climb-section .container {
+  width: 60%;
+}
+
+.climb-section .secondary-header-text {
+  left: 85%;
+}
+
+.climb-header {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+
+.climb-text {
+  width: 50%;
+  font-size: 1.2rem;
+}
+
+.climb-body {
+  height: 100vh;
+  width: 100%;
+  background-image: url("imgs/clilmb-section-background-image.png");
+  background-position: bottom;
+}
+
+.tabs {
+  background-color: var(--secondary-header-text-color);
+
+  display: flex;
+  gap: 2rem;
+  padding-left: 20%;
+}
+
+.btn {
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: none;
+  color: var(--main-color-dark);
+
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.active-tab {
+  background-color: var(--main-color-dark);
+  color: var(--secondary-header-text-color);
+  text-decoration: underline;
+}
+
+.tab-content {
+  background-color: var(--main-color);
+  width: 20%;
+  padding: 2rem 4rem;
+  opacity: 0.7;
+  margin-top: 10%;
+  margin-left: 25%;
+}
+
+.tab-content h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.route {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/**********************************/
+/********* CLIMB SECTION **********/
+footer {
+  background-color: var(--secondary-header-text-color);
+  color: var(--main-color-dark-2);
+}
+
+.footer-content {
+  text-transform: uppercase;
+  width: 60%;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-text p {
+  font-size: 1.6rem;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.copyright {
+  font-weight: 600;
+}
+
+/***************************************/
+/************ STICKY NAV ***************/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  background-color: var(--main-color);
+  padding-top: 1rem;
+  z-index: 999;
+  text-decoration: none;
+}
+
+.sticky a:link,
+.sticky a:hover {
+  color: var(--secondary-header-text-color);
+  text-decoration: underline;
+}
